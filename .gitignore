@@ -54,7 +54,11 @@ Carthage/Build
 
 # fastlane
 #
+<<<<<<< HEAD
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+=======
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the 
+>>>>>>> f563bcfd5fb20b17c828d167bfa66c4a18b59a9d
 # screenshots whenever they are needed.
 # For more information about the recommended setup visit:
 # https://github.com/fastlane/fastlane/blob/master/docs/Gitignore.md
