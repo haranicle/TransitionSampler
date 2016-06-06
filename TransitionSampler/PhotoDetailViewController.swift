@@ -10,11 +10,19 @@ import Foundation
 import UIKit
 
 public class PhotoDetailViewController: UIViewController {
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet public weak var imageView: UIImageView!
     var image: UIImage!
     
     override public func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         imageView.image = image
+    }
+    
+    public override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    @IBAction func didSwipeDown(sender: UISwipeGestureRecognizer) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public class PhotoCollectionViewController: UICollectionViewController {
+public class PhotoCollectionViewController: UICollectionViewController, UIViewControllerTransitioningDelegate {
     
     private var cellSize: CGSize {
         get {
@@ -61,6 +61,7 @@ public class PhotoCollectionViewController: UICollectionViewController {
             guard let photoDetailViewController = segue.destinationViewController as? PhotoDetailViewController else {
                 return
             }
+            photoDetailViewController.transitioningDelegate = self
             photoDetailViewController.image = photo(atIndex: selectedIndexPath.item)
             return
         default:

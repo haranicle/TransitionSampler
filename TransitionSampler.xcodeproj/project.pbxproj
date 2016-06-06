@@ -14,7 +14,7 @@
 		F24C66881D02D40C00CF107C /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D9A7491D02A2AA008D10F1 /* PhotoCollectionViewCell.swift */; };
 		F24C66891D02D40E00CF107C /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D9A7471D02A29A008D10F1 /* PhotoDetailViewController.swift */; };
 		F24C668B1D02D66700CF107C /* photos in Resources */ = {isa = PBXBuildFile; fileRef = F24C668A1D02D66700CF107C /* photos */; };
-		F24C668D1D02DDB600CF107C /* PhotoCollectionNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24C668C1D02DDB600CF107C /* PhotoCollectionNavigationController.swift */; };
+		F24C66921D05297E00CF107C /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24C66911D05297E00CF107C /* Size.swift */; };
 		F2D9A7311D029C3A008D10F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D9A7301D029C3A008D10F1 /* AppDelegate.swift */; };
 		F2D9A7381D029C3A008D10F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2D9A7371D029C3A008D10F1 /* Assets.xcassets */; };
 		F2D9A73B1D029C3A008D10F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2D9A7391D029C3A008D10F1 /* LaunchScreen.storyboard */; };
@@ -50,7 +50,7 @@
 		F24C667C1D02D33400CF107C /* PhotoCollection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoCollection.h; sourceTree = "<group>"; };
 		F24C667E1D02D33400CF107C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F24C668A1D02D66700CF107C /* photos */ = {isa = PBXFileReference; lastKnownFileType = folder; path = photos; sourceTree = "<group>"; };
-		F24C668C1D02DDB600CF107C /* PhotoCollectionNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionNavigationController.swift; sourceTree = "<group>"; };
+		F24C66911D05297E00CF107C /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		F2D9A72D1D029C39008D10F1 /* TransitionSampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitionSampler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2D9A7301D029C3A008D10F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2D9A7371D029C3A008D10F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,11 +86,11 @@
 			isa = PBXGroup;
 			children = (
 				F24C667C1D02D33400CF107C /* PhotoCollection.h */,
-				F24C668C1D02DDB600CF107C /* PhotoCollectionNavigationController.swift */,
 				F2D9A7441D02A039008D10F1 /* PhotoCollectionViewController.swift */,
 				F2D9A7491D02A2AA008D10F1 /* PhotoCollectionViewCell.swift */,
 				F2D9A7471D02A29A008D10F1 /* PhotoDetailViewController.swift */,
 				F24C667E1D02D33400CF107C /* Info.plist */,
+				F24C66911D05297E00CF107C /* Size.swift */,
 			);
 			path = PhotoCollection;
 			sourceTree = "<group>";
@@ -250,7 +250,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "pwd\nfasdfa";
+			shellScript = "cp -r ${SYMROOT}/Debug-iphonesimulator/${FULL_PRODUCT_NAME} ${PROJECT_FILE_PATH}/../${PROJECT}/PhotoCollection.playground/Sources";
 		};
 		F2FBAAF81D02BC7E00E03D47 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -273,8 +273,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F24C66891D02D40E00CF107C /* PhotoDetailViewController.swift in Sources */,
+				F24C66921D05297E00CF107C /* Size.swift in Sources */,
 				F24C66871D02D40900CF107C /* PhotoCollectionViewController.swift in Sources */,
-				F24C668D1D02DDB600CF107C /* PhotoCollectionNavigationController.swift in Sources */,
 				F24C66881D02D40C00CF107C /* PhotoCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

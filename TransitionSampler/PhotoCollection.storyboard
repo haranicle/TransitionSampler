@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NXo-ym-Jcx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="C9x-9C-GJK">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -21,7 +21,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="7cw-C4-ASb" customClass="PhotoCollectionViewCell" customModule="PhotoCollection">
-                                <rect key="frame" x="0.0" y="64" width="120" height="120"/>
+                                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
@@ -41,7 +41,7 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="imageView" destination="3PN-QL-oyu" id="REp-oR-VW2"/>
-                                    <segue destination="tm3-1G-ZXQ" kind="show" identifier="PushPhotoDetail" id="wdt-lE-vc6"/>
+                                    <segue destination="tm3-1G-ZXQ" kind="presentation" identifier="PushPhotoDetail" id="wdt-lE-vc6"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -71,17 +71,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p3P-gf-eky">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <gestureRecognizers/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1Ry-Qh-XMe" firstAttribute="top" secondItem="p3P-gf-eky" secondAttribute="bottom" id="54j-4C-ayL"/>
+                            <constraint firstItem="p3P-gf-eky" firstAttribute="width" secondItem="d94-QK-HOu" secondAttribute="width" id="APc-f6-i34"/>
                             <constraint firstItem="p3P-gf-eky" firstAttribute="centerX" secondItem="d94-QK-HOu" secondAttribute="centerX" id="FaG-N0-Sxb"/>
                             <constraint firstItem="p3P-gf-eky" firstAttribute="width" secondItem="d94-QK-HOu" secondAttribute="width" id="L24-rt-2m1"/>
+                            <constraint firstItem="p3P-gf-eky" firstAttribute="centerX" secondItem="d94-QK-HOu" secondAttribute="centerX" id="SIh-wK-KUT"/>
+                            <constraint firstItem="p3P-gf-eky" firstAttribute="leading" secondItem="d94-QK-HOu" secondAttribute="leadingMargin" constant="-20" id="Zj9-uX-Kea"/>
                             <constraint firstItem="p3P-gf-eky" firstAttribute="top" secondItem="kZz-94-wEW" secondAttribute="bottom" id="iJa-sB-abT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="p3P-gf-eky" secondAttribute="trailing" constant="-20" id="s0T-3t-gwC"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="FaG-N0-Sxb"/>
+                                <exclude reference="L24-rt-2m1"/>
+                                <exclude reference="Zj9-uX-Kea"/>
+                                <exclude reference="s0T-3t-gwC"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="rKa-Hh-0zz" appends="YES" id="8Ud-iQ-LN1"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="xel-0D-i5I"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
@@ -89,28 +106,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w8H-AF-Taf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" id="rKa-Hh-0zz">
+                    <connections>
+                        <action selector="didSwipeDown:" destination="tm3-1G-ZXQ" id="e4L-3A-TxV"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1030" y="379"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="3AC-fB-XMD">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NXo-ym-Jcx" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="568"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oVg-lY-2tD">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="C9x-9C-GJK" kind="relationship" relationship="rootViewController" id="ZNe-5b-UHg"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="STh-bP-9Zm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="175" y="379"/>
         </scene>
     </scenes>
 </document>
