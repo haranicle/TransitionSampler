@@ -1,5 +1,3 @@
-//: Playground - noun: a place where people can play
-
 import UIKit
 import XCPlayground
 import PhotoCollection
@@ -54,7 +52,7 @@ class ExpandingTransition: NSObject, UIViewControllerAnimatedTransitioning {
     }
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-        return 10
+        return 3
     }
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -65,16 +63,24 @@ class ExpandingTransition: NSObject, UIViewControllerAnimatedTransitioning {
                 return
         }
         
-        
         let expandingImageView = UIImageView(image: fromImageView.image)
         expandingImageView.contentMode = fromImageView.contentMode
         expandingImageView.clipsToBounds = true
         expandingImageView.frame.origin = fromPoint
         expandingImageView.frame.size = fromImageView.frame.size
         
+        let backgroundView = UIView(frame: UIScreen.mainScreen().bounds)
+        backgroundView.backgroundColor = UIColor.blackColor()
+        backgroundView.alpha = 0
+        containerView.addSubview(backgroundView)
+        
         containerView.addSubview(toVC.view)
         containerView.addSubview(expandingImageView)
-        toVC.view.alpha = 0
+        toVC.view.hidden = true
+        
+        UIView.animateWithDuration(transitionDuration(transitionContext) * 0.5) { 
+            backgroundView.alpha = 1
+        }
         
         UIView.animateWithDuration(
             transitionDuration(transitionContext),
@@ -83,9 +89,10 @@ class ExpandingTransition: NSObject, UIViewControllerAnimatedTransitioning {
             initialSpringVelocity: 10,
             options: .CurveEaseOut,
             animations: { () -> Void in
-                toVC.view.alpha = 1
                 expandingImageView.frame = self.toRect
         }) { _ in
+            toVC.view.hidden = false
+            backgroundView.removeFromSuperview()
             expandingImageView.removeFromSuperview()
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
         }
