@@ -57,9 +57,9 @@
 		F2D9A73A1D029C3A008D10F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2D9A73C1D029C3A008D10F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2D9A7421D029D40008D10F1 /* PhotoCollection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PhotoCollection.storyboard; sourceTree = "<group>"; };
-		F2D9A7441D02A039008D10F1 /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoCollectionViewController.swift; path = ../TransitionSampler/PhotoCollectionViewController.swift; sourceTree = "<group>"; };
-		F2D9A7471D02A29A008D10F1 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoDetailViewController.swift; path = ../TransitionSampler/PhotoDetailViewController.swift; sourceTree = "<group>"; };
-		F2D9A7491D02A2AA008D10F1 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoCollectionViewCell.swift; path = ../TransitionSampler/PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		F2D9A7441D02A039008D10F1 /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
+		F2D9A7471D02A29A008D10F1 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		F2D9A7491D02A2AA008D10F1 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		F2FBAAF71D02B21E00E03D47 /* PhotoCollection.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PhotoCollection.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
