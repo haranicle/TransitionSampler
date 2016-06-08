@@ -1,5 +1,7 @@
 # TransitionSampler
 
+A sample project to run storyboard and animation transition with a playground.
+
 ## Demo
 
 ![Demo](./images/demo.gif)
