@@ -1,6 +1,6 @@
 # TransitionSampler
 
-A sample project to run storyboard and animation transition with a playground.
+A sample project to run storyboard and custom transition with a playground.
 
 ## Demo
 
@@ -8,7 +8,7 @@ A sample project to run storyboard and animation transition with a playground.
 
 ## Usage
 
-1. Open `TransitionSampler.xcodeproj`.
-2. Build `TransitionSampler` target.
-3. Open `PhotoCollection.playground`.
-4. Open Assistant Editor.
+1. Open `TransitionSampler.xcodeproj`
+2. Build `TransitionSampler` target
+3. Open `PhotoCollection.playground`
+4. Open Assistant Editor
